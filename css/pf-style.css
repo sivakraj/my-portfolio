@@ -1,0 +1,117 @@
+body {
+  font-family: Roboto;
+  color: #2d3c49;
+}
+
+.pf-header, .pf-content, .pf-section-banner{
+  width: 100%;
+}
+
+.pf-header-name {
+  font-size: 3.75em;
+  font-weight: 200;
+  margin:  0.5em 0 0 0;
+}
+
+.pf-header-spec {
+  font-size: 1.375em;
+  margin: 0.5em 0 0.75em 0;
+}
+
+.pf-header {
+  border-bottom: 0.3125em solid #ddd;
+}
+
+/* all conversions based on 16px font size as base pixel size */
+a {
+  padding: 1.5em;
+}
+hr {
+  border-style: solid;
+  border-width: medium;
+  color: #7d97ad;
+}
+
+img {
+  max-width: 100%;
+}
+
+picture#banner img {
+  margin: 1em 0 0.5em 0;
+  width: 100vw;
+}
+
+figcaption {
+  color: #2d3c49;
+  font-family: 'Roboto condensed', sans-serif;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+figure {
+  margin: 1em 0 1em 0;
+}
+
+.pf-section-feature {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pf-feature-each {
+  width: 100%;
+}
+
+.pf-section-feature-txt {
+  width: 100%;
+  font-size: 2.2em;
+  color: #7d97ad;
+  font-weight: normal;
+  margin: 1em 0 0 0;
+}
+
+/* Media queries to stack Feature work section images horizontally */
+@media screen and (min-width: 640px) {
+  .first-work {
+    margin-right: 10px;
+  }
+
+  .first-work, .second-work {
+    width: calc((100% - 10px) / 2);
+  }
+
+  /*picture#banner img {
+    height: 80vh;
+  }*/
+}
+
+@media screen and (min-width: 800px) {
+  .second-work {
+    margin-right: 10px;
+  }
+
+  .first-work, .second-work, .third-work {
+    width: calc((100% - 20px) / 3);
+  }
+
+  /* Gimmick to float the name and specialization towards the right end of the screen. Could be able to achieve
+  with less CSS code opposed to what's written below. To be taken up time permitting. */
+  .pf-header {
+    display: inline-block;
+  }
+
+  .pf-header-logo {
+    float: left;
+  }
+
+  .pf-header-text, .pf-header-spec {
+    float: right;
+  }
+
+  .pf-header-name {
+    margin-top: 0;
+  }
+}
+
+/*@media screen and (min-width: 1200px) {
+
+}*/
